@@ -14,21 +14,21 @@ echo "=================================================="
 sleep 2
 
 # set vars
-if [ ! $NODENAME ]; then
-	read -p "Enter node name: " NODENAME
-	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
+if [ ! $NODENAME_STRIDE ]; then
+	read -p "Enter node name: " NODENAME_STRIDE
+	echo 'export NODENAME_STIDE='$NODENAME_STRIDE >> $HOME/.bash_profile
 fi
 STRIDE_PORT=16
 if [ ! $WALLET ]; then
-	echo "export WALLET=wallet" >> $HOME/.bash_profile
+	echo "export WALLET_STRIDE=wallet_stride" >> $HOME/.bash_profile
 fi
 echo "export STRIDE_CHAIN_ID=STRIDE" >> $HOME/.bash_profile
 echo "export STRIDE_PORT=${STRIDE_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 echo '================================================='
-echo -e "Your node name: \e[1m\e[32m$NODENAME\e[0m"
-echo -e "Your wallet name: \e[1m\e[32m$WALLET\e[0m"
+echo -e "Your node name: \e[1m\e[32m$NODENAME_STRIDE\e[0m"
+echo -e "Your wallet name: \e[1m\e[32m$WALLET_STRIDE\e[0m"
 echo -e "Your chain name: \e[1m\e[32m$STRIDE_CHAIN_ID\e[0m"
 echo -e "Your port: \e[1m\e[32m$STRIDE_PORT\e[0m"
 echo '================================================='
